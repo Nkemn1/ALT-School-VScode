@@ -1,0 +1,182 @@
+/*Global scope*/
+:root {
+  --color-1: blue;
+  --bg-color: #fafafa;
+}
+
+/* Element selector*/
+p {
+  color: blue;
+  font-size: 20px;
+}
+
+/* id selector*/
+/* # grabs an element from the html page */
+/* e.g. <p id="footer-p">.....*/
+#footer-p {
+  font-size: 30px;
+  color: blueviolet;
+}
+
+/* Class selector/
+/selects all elements we want to style. grouping them*/
+/*<p class="footer-p">.......*/
+.title {
+  font-size: 25px;
+  font-weight: 800;
+  text-decoration: underline;
+}
+
+html,
+body {
+  /* adding a comma means nested styles*/
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  padding: 0; /*the space within an element*/
+  margin: 0; /*the space around an element*/
+}
+
+h1,
+h2 {
+  /*remember all elements with h1 has this style applied*/
+  font-size: l30px;
+  text-decoration: overline;
+}
+
+header {
+  border-bottom: 1px solid #ddd;
+  padding: 30px;
+  margin: 70px;
+}
+
+nav a {
+  /*without the comma removes the block
+           This nav grabs the a element and styles it here*/
+  margin: 0 10px; /* top/bottom = 0, left/right = 10px*/
+}
+
+.nav,
+.main {
+  max-width: 1200px;
+  margin: 0 auto; /*centers the content*/
+  padding: 20px;
+}
+
+.main {
+  padding: 0 20px;
+}
+
+.footer-p,
+.sub-section p {
+  color: rgb(38, 112, 124);
+  padding: 0 40px;
+}
+
+.footer-p {
+  color: var(--color-1);
+}
+
+/*Block is where each element has its own line.
+  inline where blocks/content are next to each other*/
+
+/*Grid layout*/
+
+.grid {
+  display: grid;
+  grid-template-columns: 50px 50px 50px;
+  /*grid-template-columns: 1fr 1fr 1fr; "fr"unit represents a fraction
+    of the available space in the grid container. divides into three*/
+
+  grid-template-rows: 50px 50px 50px;
+  /*grid-template-rows: repeat(3, 50px); /* The repeat notation: repeats pattern*/
+  /*grid-template-rows: minmax(3, 1fr); /* minimum value for rows*/
+}
+/*Flexbox layout*/
+
+.flex-container {
+  display: flex;
+
+  /*Inline Flex display*/
+  /*display: inline-flex;*/
+
+  /*Flex direction :specifies which direction the flex box children are laid out in*/
+  flex-direction: column; /*default value, elements are in a column*/
+  /*Flex-direction: row-reverse/column-reverse; elements are in reverse*/
+  justify-content: space-between; /*space between each element*/
+  align-items: center; /*aligns items vertically*/
+  /*Flex Wrap: prevents flexbox children breaking out of their container*/
+  flex-wrap: wrap; /*wraps elements to the next line if they don't fit*/
+  /*flex-flow: row wrap (combines flex-direction and flex-wrap)*/
+}
+
+/*Flex property is used to control what proportion of the 
+available space inside a flex container an item should take up.*/
+
+.flex-item {
+  flex: 1; /*default value, all elements are the same size*/
+  /*flex: 2; /*twice as big as the other elements*/
+  /*flex: 0 1 100px; /*0 = don't grow, 1 = can shrink, 100px = base size*/
+  /*flex: none; /*default value, same as 0 1 auto*/
+  /*flex-grow: 1; /*default value, all elements are the same size*/
+  /*flex-shrink: 1; /*default value, all elements are the same size*/
+  /*flex-basis: auto; /*default value, all elements are the same size*/
+}
+/*Flexbox align-self: you can override 'align-items' behaviour for individual
+    flex items by applying 'align-self' property to them*/
+.flex-item:first-child {
+  align-self: flex-end; /*default value, all elements are the same size*/
+  /*align-self: flex-start; /*default value, all elements are the same size*/
+  /*align-self: center; /*default value, all elements are the same size*/
+  /*align-self: baseline; /*default value, all elements are the same size*/
+  /*align-self: stretch; /*default value, all elements are the same size*/
+
+  /*Flexbox ordering*/
+  order: 1; /*changes the layout order of flex items without affecting source order*/
+}
+
+/*Media queries: used to apply different styles for different devices or screen sizes*/
+
+/*target print devices*/
+@media print {
+  body {
+    font-size: 12px;
+  }
+}
+/*target screen and print devices*/
+@media screen, print {
+  body {
+    font-size: 12px;
+  }
+}
+
+/*target specific viewport sizes*/
+@media (max-width: 600px) {
+  body {
+    font-size: 12px;
+  }
+}
+
+/*combine type and/or features*/
+@media (max-width: 600px) and (orientation: portrait) {
+  body {
+    font-size: 12px;
+  }
+}
+
+/*animation*/
+/*@keyframes duration|easing-function|delay|iteration-count
+|direction|fill-mode|play-state|name*/
+/* animation: 3s|ease-in|1s|2|reverse|both|paused|slidein;*/
+/*@keyframes name|duration|easing-function|delay*/
+/* animation: slidein|3s|linear|1s;*/
+/*@keyframes name|duration*/
+/* animation: slidein|3s;*/
+
+@keyframes slidein {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+

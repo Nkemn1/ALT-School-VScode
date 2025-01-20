@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About</title>
+
+    <link href="../assets/styles/index.css" rel="stylesheet" />
+    <!-- the double dots '..' navigates the file in a heirachical way
+   so from the about page, it goes back to the homepage then goes to
+   the file needed to be added -->
+  </head>
+  <body>
+    <!-- Ordered Lists-->
+    <section>
+      <p>Item Categories</p>
+      <ol>
+        <!--lists-->
+        <li>Clothing</li>
+        <li>Food</li>
+      </ol>
+    </section>
+    <!-- Unordered Lists-->
+    <section>
+      <p>Unordered Lists</p>
+      <ul>
+        <!--lists-->
+        <li>Clothing</li>
+        <li>Food</li>
+      </ul>
+    </section>
+
+    <section class="sub-section">
+      <h2>Random message</h2>
+      <p>
+        Exploration fuels innovation, driving humanity toward remarkable
+        discoveries. From deep oceans to distant galaxies, curiosity unveils
+        boundless opportunities. Every challenge faced becomes a stepping stone,
+        forging resilience and growth. Together, through collaboration and
+        creativity, we shape a brighter future. The journey of progress is
+        endless, inspiring generations to dream big.
+      </p>
+    </section>
+
+    <section class="sub-section">
+      <p>
+        Exploration fuels innovation, driving humanity toward remarkable
+        discoveries. From deep oceans to distant galaxies, curiosity unveils
+        boundless opportunities. Every challenge faced becomes a stepping stone,
+        forging resilience and growth. Together, through collaboration and
+        creativity, we shape a brighter future. The journey of progress is
+        endless, inspiring generations to dream big.
+      </p>
+    </section>
+    <!-- Navigating Internally. -->
+    <a href="../">Home</a>
+    <a href="./">About page</a>
+
+    <br />
+
+    <main class="main">
+      <h1>About Page</h1>
+      <section class="grid">
+        <div>One</div>
+        <div>Two</div>
+        <div>three</div>
+      </section>
+      <style>
+        table, th,td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+      </style>
+
+      <section id="random-table">
+        <table>
+            <caption>Random table</caption>
+          <thead>
+            <tr>
+                <th>Header 1</th>
+                <th>Header 2</th>
+                <th>Header 3</th>
+                <th>Header 4</th>
+                <th>Header 5</th>
+            </tr>
+          </thead>
+
+          <tbody>              
+           
+            tbody>tr*5{samples $}
+
+          </tbody>
+        </table>
+      </section>
+    
+    <table>
+        <caption>Student Grades</caption>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Grade</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th rowspan="2">John</th>
+            <td>85</td>
+          </tr>
+          <tr>
+            <th rowspan="2">Emily</th>
+            <td>92</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+    <table>
+        <caption>Alt Alumni</caption>
+        <thead>
+          <tr>
+            <th rowspan="2" id="name" scope="col">Name</th>
+            <th colspan="2" id="path">Career path</th>
+            <th rowspan="2" id="year">Year</th>
+          </tr>
+          <tr>
+            <th id="past" scope="col">Past</th>
+            <th id="future" scope="col">Destiny</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th id="hal" scope="row">Hal Gibrah</th>
+            <td headers="hal path past">Calculator</td>
+            <td headers="hal path future">Mars rover</td>
+            <td>2020</td>
+          </tr>
+          <tr>
+            <th id="cathy" scope="row">James Bond</th>
+            <td headers="cathy path past">Waste disposal</td>
+            <td headers="cathy path future">Automated teller</td>
+            <td>2018</td>
+          </tr>
+          <tr>
+            <th id="lou" scope="row">Lou Minious</th>
+            <td headers="lou path past">Lightbulb</td>
+            <td headers="lou path future">Smart bulb</td>
+            <td>1956</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <h1>Form</h1>
+      <form action="/submit" method="post">
+        <div class="form-control">
+         <label for="name">Name:   </label>
+         <input type="text" name="name" id="name" required="Name"
+         autocomplete="nickname">
+        </input>
+        </div>
+      </form>
+
+      <br>
+
+      <fieldset>
+        <legend>Who is your favorite student?</legend>
+        <ul>
+          <li>
+            <label>
+              <input type="radio" value="blendan" name="machine"> Blendan Smooth
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="radio" value="hoover" name="machine"> Hoover Sukhdeep
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" value="toasty"  name="machine"> Toasty McToastface
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" value="cooker"  name="machine"> cookerooni
+            </label>
+          </li>
+        </ul>
+      </fieldset>
+<br><br>
+
+<!--Use of grid container-->
+<p>
+  A <strong>parent section</strong> with three <strong>div child elements.</strong>
+</p>
+<section class="grid">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+</section>
+    </main>
+    <footer>
+      <p class="footer-p" >This is a footer</p>
+    </footer>
+  </body>
+</html>

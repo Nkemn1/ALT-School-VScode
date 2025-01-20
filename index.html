@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" /> <!--The dark blue colours are the elements
+    and the light blue is an attribute (desscribes or tells more about the element)-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HomePage</title>
+
+
+    <!-- shift + 1: automatically brings up HTML startup page.-->
+      <meta/>
+
+    <!-- External style -->
+     <!-- the style sheet index.css has already been made
+      you just need to link it -->
+
+      <link href="./assets/styles/index.css" rel="stylesheet"/>
+
+  </head>
+  <body>
+    <!--Comment line
+    <p>Hello Walmart Peppa Pif.</p>
+    Display image
+    <img src="./assets/images/git-github.png" alt="HTML tutorial" > -->
+
+     <!-- Self closing tags -->
+     
+      <br/>
+
+    <!-- Headings -->
+    <h1>HomePage!</h1>
+    <!-- Internal style -->
+     <!-- Deined in the header tag.
+      selects All p elements then styles in this way. 
+      If used within the sheet it cancels out external styling-->
+     <style>
+      p {
+          color: red;
+          font-size: large;
+      }
+     </style>
+    <h2>Heading2</h2>
+    <!-- Inline style -->
+     <!-- specifically styled element within the project
+      the last rule in the line gets applied nullifying the first-->
+     <p style="color: blue; color: red;">Hello World</p>
+
+    <b></b>
+
+    <!-- CSS class selector used here -->
+    <h3 class="title"> Heading 3</h3>
+
+    <h4 class="title"> Heading 4</h4>
+
+    <h5>Heading 5</h5>
+    <p>
+      Exploration fuels innovation, driving humanity toward remarkable discoveries. 
+      From deep oceans to distant galaxies, curiosity unveils boundless opportunities. 
+      Every challenge faced becomes a stepping stone, forging resilience and growth. 
+      Together, through collaboration and creativity, we shape a brighter future. 
+      The journey of progress is endless, inspiring generations to dream big.
+    </p>
+    <!-- Ordered Lists-->
+     <section>
+        <p>Item Categories</p>
+        <ol>
+            <!--lists-->
+            <li>Clothing</li>
+            <li>Food</li>
+        </ol>
+     </section>
+     <!-- Unordered Lists-->
+      <section>
+        <p>Unordered Lists</p>
+        <ul>
+         <!--lists-->
+         <li>Clothing</li>
+         <li>Food</li>
+        </ul>
+      </section>
+    
+      <section>
+        <nav class="nav"> 
+        <!-- Navigating Internally. -->
+         <!-- i.e within a folder created under alt vscode file -->
+         <a href="./">Home</a>
+         <a href="./About/">About page</a>
+      </nav>
+         </section>
+
+
+         <section>
+       <!-- External Navigation-->
+        <nav class="nav">
+        <a href="https://www.youtube.com/@setemiojo" target="_blank">Go to Teachers page</a>
+     <!-- Target allows to open code in another browser-->
+         </nav>
+    </section>
+
+    
+      <section>
+        <!-- Download stuff in html aka images-->
+         <p>To Download text</p>
+         <a href="./assets/images/OIP.jpeg" download="" rel="noopener">Download Image</a>
+         
+         <!-- The 'download' is an attribute.-->
+
+      </section>
+
+      <section>
+        <p>Play Audio</audio></p>
+        <!-- Plays an audio in HTML-->
+         <!-- allows to embed an audio-->
+         <audio src="./assets/Audio/mobile-phone-ringtone-6769.mp3" controls></audio>
+
+         <!-- allows to embed a video-->
+         <video src="./assets/Video/video1.mp4" controls></video>
+
+      </section>
+
+      <section>
+<!-- Form Element-->
+ <!-- section containing interactive controls for submitting information-->
+        <form>
+            <label for="name"> Enter your name: </label>
+            <br> <!--enters a line for the input box-->
+            <br>
+            <select id="dropdown"><!-- Generates a drop down list containing the values below-->
+                <option>Dog</option>
+                <option>Cat</option>
+            </select>
+            <input type="text" placeholder="biko name" id="name" required/>
+            <input type="submit" value="send" /> <!-- The type field determines the input data type-->
+        </form>
+      </section>
+
+      <!--<div>: The Content Division element-->
+      <div class="shadowbox">
+        <p>Here's a very interesting note displayed in a lovely shadowed box.
+          <br>
+          i'll need css to design it (java to interact).
+        </p>
+      </div>
+
+      <footer>
+        <p id="footer-p">This is a footer</p>
+      </footer>
+
+ <!-- CSS Basics -->
+  
+<!-- 
+ Cascading stylw sheet (CSS) is a stylesheet used to describe 
+  presentation of a document written in HTML.
+     -->
+
+<!-- Element Selector -->
+
+
+
+
+      <!-- for assignment-->
+ <p>
+    <h3>For assignment 1</h3>
+ </p>
+        <a href="#main" class="visually-hidden">Skip to main</a>
+<!-- fragement identifier -->
+<nav aria-label="Breadcrumbs">
+  <!--  role="list" was added back in because some CSS display 
+    property values remove the semantics from some elements.  -->
+  <ol id="top" role="list">
+    <li><a href="#">Ho<span>me</span></a></li>
+    <li><a href="/living">Living Room</a></li>
+    <li><a aria-current="page" href="/living/couch">Couches</a></li>
+    <li><a href="/living/couch/sectional">Sectional</a></li>
+  </ol>
+</nav>
+<main id="main">
+  Here is the main content
+</main>
+<footer>
+tthis is the footer
+  <span>
+    <a href="#top">Got to the Top
+</a>
+</span>
+</footer>
+      </section>
+  </body>
+</html>
