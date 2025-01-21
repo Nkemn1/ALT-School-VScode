@@ -173,10 +173,16 @@ available space inside a flex container an item should take up.*/
 
 @keyframes slidein {
   from {
-    transform: translateX(0%);
+    margin-left: 100%;
+    width:300%
   }
   to {
-    transform: translateX(100%);
+    margin-left: 0%;
   }
+}
+
+.animate {
+  animation: slidein;
+  animation-duration: 3s;
 }
 
